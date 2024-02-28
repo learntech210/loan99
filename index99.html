@@ -1,0 +1,126 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index Page</title>
+
+  <style type="text/css">
+
+  .container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background-color: azure;
+  }
+  .row {
+    padding: 10px;
+    margin: 10px;
+  
+  }
+  nav{
+    background-color: aqua;
+    color: violet;
+    text-align: center;
+  }
+
+  .col{
+    width: 80%;
+    margin: auto;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="row">
+      <nav>
+        <h1> Prediction of a Loan </h1>
+      <h3> Enter the following values to predict the loan of an applicant</h3>
+      </nav>
+     
+      <div class="col">
+        <p>Please enter the following details:</p>
+
+        <form action="predict" method="post">
+
+
+
+                <table>
+                  <tr>
+                    <td>No of Dependents:</td>
+
+                    <td> <select name="dependents">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                          </td>
+                  </tr>
+                  <tr>
+                    <td>Education:</td>
+                    <td> <input type="radio" id="yes" name="education" value="1">
+                        <label for="yes">Graduate</label>
+                        <input type="radio" id="No" name="education" value="0">
+                        <label for="no">Under Graduate</label><br>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>  <label for="Applicant Income">Applicant Income: </label></td>
+                    <td>   <input type="text" id="Applicant Income" name="Applicant_Income"><br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>  <label for="Loan amount">Loan amount: </label></td>
+                    <td> <input type="text" id="Loan amount" name="Loan_amount"><br></td>
+                  </tr>
+                  <!-- <tr>
+                    <td>  <label for="Loan amount term">Loan amount term: </label></td>
+                    <td> <input type="text" id="Loan amount term" name="Loan_term"></td>
+                  </tr> -->
+                  <tr>
+                    <td><label for="credit history">credit history </label></td>
+                    <td> <input type="radio" id="good" name="Credit_history" value="1">
+                        <label for="yes">YES</label>
+                        <input type="radio" id="bad" name="Credit_history" value="0">
+                        <label for="no">NO</label><br></td>
+                  </tr>
+                  <tr>
+                    <td> <label for="Property area">Property area </label></td>
+                    <td>   
+                      <select name="property_area">
+                      <option value="1">Rural</option>
+                      <option value="2">Urban</option>
+                      <option value="3">semi-Urban</option>
+                      
+                      </select></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"> <button type="submit">Predict</button></td>
+                  </tr>
+                </table>
+          
+            </form>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  {{prediction_text}}
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
